@@ -9,5 +9,5 @@ gulp.task("less", function() {
     .src("app/**/*.less")
     .pipe(less())
     .pipe(postcss(processors))
-    .pipe(gulp.dest("server/less"));
+    .pipe(gulp.dest("server/public"));
 });
