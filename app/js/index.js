@@ -1,4 +1,5 @@
-const a = 1;
-const b = 2;
-consolt.log(b);
-console.log(a);
+import 'babel-polyfill';
+import Movie from './movie';
+
+const syy=new Movie();
+

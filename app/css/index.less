@@ -1,4 +1,161 @@
-.box{
+
+// header
+.header{
+    z-index: 4;
+    position: fixed;
+    left: 0px;
+    top: 0px;
     width: 100%;
-    display: flex;
+    height: 40px;
+    // filter: blur(10px);
+    background:rgba(0, 0, 0, 0.3) ;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 2px 4px;
+}
+
+.headBox{
+    width: 1200px;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    .menus{
+        float: left;
+    }
+    .load{
+        float: right;
+    }
+    li{
+        float: left;
+        a{
+                color: white;
+                padding: 0 10px;
+                display: block;
+            }
+        }
+    li:hover{
+        background: rgba(255,255,255,0.4)
+    }
+}
+
+.search{
+    z-index: 3;
+    width: 1200px;
+    height:34px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    margin-left: -600px;
+    .rank{
+        float: right;
+        width: 72px;
+        height: 34px;
+        border-radius: 4px;
+        background: rgba(255,255,255,0.6);
+        display: flex;
+        line-height: 34px;
+        &:hover{
+           background: rgba(255,255,255,0.8);
+        }
+        i,span{
+            flex: 1;
+            color: #f25d8e;
+        }
+        span{
+            min-width: 42px;
+        }
+    }
+    .serachBox{
+        float: right;
+        border-radius: 4px;
+        background: rgba(255,255,255,0.6);
+        margin-left: 6px;
+        &:hover{
+           background: rgba(255,255,255,0.8);
+        }
+        &:hover i{
+           color: #f25d8e;
+        }
+        input{
+            background: none;
+            border: none;
+            width: 200px;
+            padding-left: 10px;
+            height: 34px;
+            outline:none;
+        }
+        i{
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            color: #00a1d6;
+        }
+    }
+}
+
+.fadeBox{
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.6);
+}
+.loginbox{
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    border-radius: 8px;
+}
+.shape{
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+// 2px solid #00a1d6
+.navs{
+    margin-top: 10px;
+    width: 100%;
+    height:60px;
+    border-bottom: 1px solid #e5e9ef;
+    position: relative;
+    ul{
+        height:60px;
+        display: flex;
+        width: 80%
+    }
+    li:hover li label{
+        color: #00a1d6;
+    }
+    li{
+        flex: 1;
+        text-align: center;
+        label,span{
+            display: inline-block;
+        }
+        span{
+            width: 40%;
+            background: #ffafc9;
+            color: white;
+            border-radius: 4px;
+        }
+        label{
+            width: 100%;
+            line-height: 30px;
+        }
+    }
+    
+    .navGo{
+        position: absolute;
+        bottom: 0px;
+        width: 73px;
+        height: 2px;
+        background:#00a1d6;
+    }
 }
