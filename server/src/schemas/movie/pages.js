@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const NewestSchema = new mongoose.Schema({
+const PagesSchema = new mongoose.Schema({
+    name:String,
     list:Array,
     meta: {
         createAt: {
@@ -14,7 +15,7 @@ const NewestSchema = new mongoose.Schema({
     },
 });
 
-NewestSchema.pre('save', function(next) {
+PagesSchema.pre('save', function(next) {
     if (this.isNew) {
         this.meta.createAt = this.meta.updateAt = Date.now();
     } else {
@@ -24,4 +25,4 @@ NewestSchema.pre('save', function(next) {
 })
 
 
-module.exports = NewestSchema;
+module.exports = PagesSchema;

@@ -12,7 +12,7 @@ import {log,colors} from 'gulp-util';
 import args from './util/args';
 
 gulp.task('scripts',()=>{
-  return gulp.src(['app/js/index.js'])
+  return gulp.src(['app/js/*.js','!app/js/jquery.min.js'])
     .pipe(plumber({
       errorHandle:function(){
 
@@ -32,10 +32,7 @@ gulp.task('scripts',()=>{
       }))
     })
     .pipe(gulp.dest('server/public/js'))
-    .pipe(rename({
-      basename:'index',
-      extname:'.min.js'
-    }))
+    .pipe(rename({suffix:'.min'}))
     .pipe(uglify({compress:{properties:false},output:{'quote_keys':true}}))
     .pipe(gulp.dest('server/public/js'))
     .pipe(gulpif(args.watch,livereload()))

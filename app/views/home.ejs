@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <%- include("layout/jsCss") -%>
-  </head>
-  <body>
-      <!-- 公用header -->
-      <%- include("layout/header") -%>
-      <div style="height:100px;width:100px;background:red;"></div>
-      <!-- main JS -->
-      <%- include("layout/mainScript") -%>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <%- include("layout/jsCss") -%>
+</head>
+
+<body>
+  <!-- 公用header -->
+  <%- include("layout/header") -%>
+    <section id="container">
+    </section>
+    <!-- main JS -->
+    <%- include("layout/mainScript",{name:'home'}) -%>
+</body>
 </html>

@@ -44,12 +44,11 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(2);
+	module.exports = __webpack_require__(1);
 
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -58,52 +57,25 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var Index = function () {
-	    function Index() {
-	        _classCallCheck(this, Index);
+	var Page = function () {
+	    function Page(opt) {
+	        _classCallCheck(this, Page);
 
-	        this.onload();
+	        this.data = JSON.parse($("#DataSet").val());
+	        this.init();
 	    }
 
-	    _createClass(Index, [{
-	        key: "onload",
-	        value: function onload() {
-	            this.initBd();
-	            this.searchGo();
-	        }
-
-	        // 设置背景
-
-	    }, {
-	        key: "initBd",
-	        value: function initBd() {
-	            var url = '/images/test.jpg';
-	            $("#container").css({
-	                minHeight: $(document).height()
-	                // background:`url('${url}')`
-	            });
-	        }
-
-	        // 搜索
-
-	    }, {
-	        key: "searchGo",
-	        value: function searchGo() {
-	            $("#searchGo").click(function () {
-	                var val = $('#searchVal').val();
-	                if (val) {
-	                    location.href = "/movie/s=" + encodeURI(val);
-	                } else {
-	                    console.log("0");
-	                };
-	            });
+	    _createClass(Page, [{
+	        key: "init",
+	        value: function init() {
+	            console.log(this.data);
 	        }
 	    }]);
 
-	    return Index;
+	    return Page;
 	}();
 
-	var index = new Index();
+	var page = new Page();
 
 /***/ })
 /******/ ]);
