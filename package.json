@@ -33,7 +33,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-movie",
+    "start": "egg-scripts start --port=3003 --daemon --title=egg-server-movie",
     "stop": "egg-scripts stop --title=egg-server-movie",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
